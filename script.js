@@ -72,7 +72,7 @@ export function aufgabe03(args) {
 
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
-export function aufgabe(args) {
+export function aufgabe04(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
@@ -83,3 +83,42 @@ export function aufgabe(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+  let count = 0
+  // Zähle alle Grossbuchstaben im Text
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn es ein Sonderzeichen ist, mache nichts
+    if (currentElement === ".") {
+      // ignorieren
+      // ignoriere auch Punkte
+    } else if (currentElement === ".") {
+      // ignorieren
+    } else if (currentElement === currentElement.toUpperCase()) {
+      count = count + 1
+    }
+  }
+  return count
+}
+
+linkupExerciseHandler("data-click=aufgabe05", aufgabe05)
+
+export function aufgabe06(args) {
+  const currentElement = args
+  const result = []
+  let count = 0
+  // Zähle alle Sonderzeichen im Text
+  for (let i = 0; i < currentElement.length; i++) {
+    const currentElement = currentElement[i]
+    // Zähle alle Sonderzeichen im Text
+    if (currentElement === ".") {
+      // Zähle das current Element
+      count = count + 1
+    }
+  }
+  return count
+}
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
