@@ -122,3 +122,33 @@ export function aufgabe06(args) {
   return count
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const currentElement = args
+  const result = []
+  let count = 0
+
+  for (let i = 0; i < currentElement.length; i++) {
+    // Finde heraus, ob sich das Wort und befindet sich an der Stelle i
+    if (
+      currentElement[i] === "u" &&
+      currentElement[i + 1] === "n" &&
+      currentElement[i + 2] === "d"
+    ) {
+      count = count + 1
+    }
+  }
+  return count
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args){
+const input = args
+const result = []
+
+for(let i =0; i<input.length; i++){
+
+
+
+
+}
