@@ -72,18 +72,6 @@ export function aufgabe03(args) {
 
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
-export function aufgabe04(args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (condition) {
-    }
-  }
-  return result.join("")
-}
-linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
-
 export function aufgabe05(args) {
   const input = args
   const result = []
@@ -104,22 +92,24 @@ export function aufgabe05(args) {
   return count
 }
 
-linkupExerciseHandler("data-click=aufgabe05", aufgabe05)
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  const currentElement = args
+  const input = args
   const result = []
-  let count = 0
-  // Zähle alle Sonderzeichen im Text
-  for (let i = 0; i < currentElement.length; i++) {
-    const currentElement = currentElement[i]
-    // Zähle alle Sonderzeichen im Text
-    if (currentElement === ".") {
-      // Zähle das current Element
-      count = count + 1
+  let istSonderzeichen = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const upperCaseLetter = currentElement.toUpperCase()
+
+    const lowerCase = currentElement.toUpperCase()
+
+    if (lowerCase === upperCaseLetter) {
+      istSonderzeichen = true
     }
   }
-  return count
+  return istSonderzeichen
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
@@ -147,13 +137,15 @@ export function aufgabe08(args) {
   const result = []
 
   for (let i = 0; i < input.length; i++) {
-    //wenn das Element ein e ist, mache es zu einer 3
-    if (input[i] === "e") {
-      result.push("3")
+    if (currentElement === "e") {
+      result.push(3)
+    } else if (currentElement === "E") {
+      result.push(3)
     } else {
-      result.push(input[i])
+      result.push(currentElement)
     }
   }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 
@@ -183,13 +175,6 @@ export function aufgabe10(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
-export function aufgabe11(args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {}
-}
-linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
-
 export function aufgabe12(args) {
   const input = args
   const result = []
@@ -204,3 +189,6 @@ export function aufgabe12(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe13(args) {}
+linkupExerciseHandler("[data-click=aufgabe13]")
