@@ -142,13 +142,65 @@ export function aufgabe07(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
-export function aufgabe08(args){
-const input = args
-const result = []
+export function aufgabe08(args) {
+  const input = args
+  const result = []
 
-for(let i =0; i<input.length; i++){
-
-
-
-
+  for (let i = 0; i < input.length; i++) {
+    //wenn das Element ein e ist, mache es zu einer 3
+    if (input[i] === "e") {
+      result.push("3")
+    } else {
+      result.push(input[i])
+    }
+  }
 }
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  //prüfe ob der Text genau 6 Zeichen lang ist
+  const input = args
+  const result = []
+  if (input.length === 6) {
+    return "Ja"
+  } else {
+    return "Nein"
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe10(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    // teste, ob die Eingabe ein korrekter RGB Hexcode ist
+    if (input[i] === "#") {
+      return true
+    } else {
+      return false
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe11(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {}
+}
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    // suche die position des ersten "e"s im Text
+    if (input[i] === "e") {
+      return i
+    } else {
+      return -1
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
