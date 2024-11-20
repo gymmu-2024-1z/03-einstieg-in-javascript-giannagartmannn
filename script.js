@@ -61,9 +61,11 @@ export function aufgabe03(args) {
     const currentElement = input[i]
     if (currentElement === "e") {
       //count
+      // wir geben hier den Auftrag "e" zu erkennen und zu zählen
       result.push(currentElement)
     } else if (currentElement === "E") {
       //count
+      //wir zählen ebenfalls ein "E"
       result.push(currentElement)
     }
   }
@@ -97,20 +99,26 @@ linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 export function aufgabe06(args) {
   const input = args
   const result = []
-  let istSonderzeichen = false
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const upperCaseLetter = currentElement.toUpperCase()
-
-    const lowerCase = currentElement.toUpperCase()
-
-    if (lowerCase === upperCaseLetter) {
-      istSonderzeichen = true
+    const ascii = currentElement.charCodeAt(0)
+    if (ascii >= 48 && ascii <= 57) {
+      // okay, mache weiter
+      // wir suchen den ASCII-Wert von Zahlen
+    } else if (ascii >= 65 && ascii <= 90) {
+      // okay, mache weiter
+      // wir suchen den ASCII-Wert von Grossbuchstaben
+    } else if (ascii >= 97 && ascii <= 122) {
+      // okay, mache weiter
+      // wir suchen den ASCII-Wert von Kleinbuchstaben, damit wir nichts machen, falls diese vorkommen
+    } else {
+      return true
     }
   }
-  return istSonderzeichen
+  return false
 }
+
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
@@ -124,6 +132,7 @@ export function aufgabe07(args) {
       currentElement[i] === "u" &&
       currentElement[i + 1] === "n" &&
       currentElement[i + 2] === "d"
+      //Ich gebe es so ein, dass nicht nur die Buchstbaen einzeln gezählt werden, sondern das ganze Wort
     ) {
       count = count + 1
     }
@@ -133,7 +142,7 @@ export function aufgabe07(args) {
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {
-  const input = args
+  const currentElement = args
   const result = []
 
   for (let i = 0; i < input.length; i++) {
@@ -154,6 +163,7 @@ export function aufgabe09(args) {
   const input = args
   const result = []
   if (input.length === 6) {
+    //Wir geben es so ein,falls der vorhandene Text 6 Zeichen lang ist
     return "Ja"
   } else {
     return "Nein"
@@ -184,11 +194,51 @@ export function aufgabe12(args) {
     if (input[i] === "e") {
       return i
     } else {
-      return -1
+      return +1
+
+      //in informatik beginnen wir das Zählen bei 0
     }
   }
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
 export function aufgabe13(args) {}
+
 linkupExerciseHandler("[data-click=aufgabe13]")
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+  //wenn du ein Zeichen findest
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //Wenn du einen Buchstaben findest
+    if (currentElement >= "a" && currentElement <= "z") {
+      //verdopple sie
+      result.push(currentElement + currentElement)
+      //hier wird eigentlich einfach das Element plus nochmal das Element zusammengefügt (bspw. a + a = aa)
+    }
+  }
+  return result.join(" ")
+}
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe27(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 48 && ascii <= 57) {
+      //wir geben den ASCII-Wert von Zahlen ein, um diese zu erkennen und dann beim nächsten Schritt als true kennzuzeichnen
+      return true
+      // wenn es eine Zahl ist, wird uns true angezeigt
+    } else {
+      return false
+      //wenn nicht, false
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
