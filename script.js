@@ -242,3 +242,25 @@ export function aufgabe27(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      // falls also das current element ein punkt ist
+      if (input[i + 1] === ".") {
+        return true
+        //soll uns "true" angezeigt werden
+      } else {
+        //wenn es kein punkt ist
+        return false
+        //soll uns false angezeigt werden
+      }
+    }
+  }
+  return result.join(" ")
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
