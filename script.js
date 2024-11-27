@@ -142,14 +142,16 @@ export function aufgabe07(args) {
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {
-  const currentElement = args
+  const input = args
   const result = []
 
   for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //ein gleichheitszeichen weist zu
     if (currentElement === "e") {
+      //drei gleichheitszeichen bedeuten, dass es genau das sein muss
       result.push(3)
-    } else if (currentElement === "E") {
-      result.push(3)
+      //das resultat bei "e" soll 3 sein
     } else {
       result.push(currentElement)
     }
@@ -201,10 +203,6 @@ export function aufgabe12(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
-
-export function aufgabe13(args) {}
-
-linkupExerciseHandler("[data-click=aufgabe13]")
 
 export function aufgabe19(args) {
   const input = args
@@ -264,3 +262,25 @@ export function aufgabe20(args) {
   return result.join(" ")
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 32 && ascii <= 94) {
+      //wir geben den ASCII-Wert von Zahlen, Sonderzeichen ausser _ ein, um diese zu erkennen
+      return "_"
+    } else if (ascii >= 96 && ascii <= 107) {
+      // wir geben den ASCII-Wert von einem Sonderzeichen und den Kleinbuchstaben  a bis j ein, um diese zu erkennen
+      return "_"
+    } else {
+      //mache nichts
+      return result.join("")
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
