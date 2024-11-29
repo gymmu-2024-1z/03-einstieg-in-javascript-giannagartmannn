@@ -266,21 +266,36 @@ linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 export function aufgabe22(args) {
   const input = args
   const result = []
+  let foundk = false //wir prüfen, ob k bereits gefunden wurde
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const ascii = currentElement.charCodeAt(0)
 
-    if (ascii >= 32 && ascii <= 94) {
+    if (foundk) {
+      //falls k gefunden wurde, bleiben die Zeichen unverändert
+      result.push(currentElement)
+    } else if (ascii >= 32 && ascii <= 94) {
       //wir geben den ASCII-Wert von Zahlen, Sonderzeichen ausser _ ein, um diese zu erkennen
-      return "_"
-    } else if (ascii >= 96 && ascii <= 107) {
+      //wäre nicht nötig gewesen "_" auszulassen, da ich es später in der Aufgabe nicht mit seinem ASCII-Wert verwendet habe
+      result.push("_")
+    } else if (ascii >= 96 && ascii <= 106) {
       // wir geben den ASCII-Wert von einem Sonderzeichen und den Kleinbuchstaben  a bis j ein, um diese zu erkennen
-      return "_"
-    } else {
-      //mache nichts
-      return result.join("")
+      result.push("_")
+    } else if (ascii >= 108 && ascii <= 126) {
+      // wir geben den ASCII-Wert von den Kleinbuchstaben l bis z und einigen Sonderzeichen ein, um diese zu erkennen
+      result.push("_")
+    } else if (ascii === 107) {
+      // wir geben den ASCII-Wert von den Kleinbuchstaben k ein, um diese zu erkennen
+      result.push("k")
+      foundk = true
     }
   }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function eigeneaufgabe(args) {
+  const input = args
+  const result = []
+}
