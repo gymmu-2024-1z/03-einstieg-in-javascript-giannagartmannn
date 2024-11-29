@@ -217,7 +217,7 @@ export function aufgabe19(args) {
       //hier wird eigentlich einfach das Element plus nochmal das Element zusammengefügt (bspw. a + a = aa)
     }
   }
-  return result.join(" ")
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
@@ -298,4 +298,20 @@ linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 export function eigeneaufgabe(args) {
   const input = args
   const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      //verdoplle sie
+      result.push(currentElement + currentElement)
+    } else if (currentElement === "E") {
+      //verdopple sie
+      result.push(currentElement + currentElement)
+      //Element + Element
+    } else {
+      result.push(currentElement)
+      //alle anderen Zeichen bleiben unverändert
+    }
+  }
+  return result.join("")
 }
+linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe)
