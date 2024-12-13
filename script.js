@@ -217,14 +217,30 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 export function aufgabe10(args) {
   const input = args
   const result = []
-  for (let i = 0; i < input.length; i++) {
+
+  if (input[0] === "#") {
+    // die erste Stelle ist die Stelle 0, diese muss # sein, um ein korrekter RGB Hexcode zu sein
+  } else {
+    return false
+  }
+
+  if (input.length === 7) {
+    // ist okay, können weiter machen
+  } else {
+    return false
+  }
+
+  for (let i = 1; i < input.length; i++) {
     // teste, ob die Eingabe ein korrekter RGB Hexcode ist
-    if (input[i] === "#") {
-      return true
+    const ascii = input[i].charCodeAt(0)
+    if ((ascii >= 48 && ascii <= 57) || (ascii >= 65 && ascii <= 70)) {
+      // wir wählen die Zahlen von 0 bis 9 und die Grossbuchstaben von A bis F, da nur diese in RGB Hexcodes vorkommen können
     } else {
       return false
     }
   }
+
+  return true
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
