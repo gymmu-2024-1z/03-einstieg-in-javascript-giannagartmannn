@@ -370,7 +370,7 @@ export function aufgabe22(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 
-export function eigeneaufgabe(args) {
+export function aufgabe29(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
@@ -389,9 +389,18 @@ export function eigeneaufgabe(args) {
   }
   return result.join("")
 }
-linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe)
+linkupExerciseHandler("[data-click=eigeneaufgabe]", aufgabe29)
 
 export function eigeneaufgabe24(args) {
   const input = args
   const result = []
 }
+linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
+
+export function bubbleSort(args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
