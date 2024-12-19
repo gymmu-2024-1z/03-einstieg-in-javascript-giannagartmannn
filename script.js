@@ -469,7 +469,7 @@ linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
 
 export function bubbleSort(args) {
   // Sicherstellen, dass die Eingabe eine Liste ist
-  const text = args
+  const itext = args
   const list = text.split("") // Erzeugt eine Kopie des Eingabearrays
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i]
