@@ -205,11 +205,16 @@ export function aufgabe09(args) {
   //prüfe ob der Text genau 6 Zeichen lang ist
   const input = args
   const result = []
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    count = count + 1
+  }
   if (input.length === 6) {
-    //Wir geben es so ein,falls der vorhandene Text 6 Zeichen lang ist
-    return "Ja"
+    //Wir geben es so ein, falls der vorhandene Text 6 Zeichen lang ist
+    return true
   } else {
-    return "Nein"
+    return false
   }
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
