@@ -266,6 +266,17 @@ export function aufgabe12(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
+export function aufgabe13(args) {
+  for (let i = input.length - 1; i >= 0; i--) {
+    // -- um von hinten zu zählen
+    if (input[i] === "e") {
+      return i // gibt uns die position des letzten e's zurück
+    }
+  }
+  return -1 //wir geben -1 zurueck, wenn es keine e's gibt
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
 export function aufgabe14(args) {
   const input = args
   let count = 0
