@@ -267,6 +267,30 @@ export function aufgabe14(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
+export function aufgabe17(args) {
+  const input = args
+  const totalist = []
+  const currentlist = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Sobald wir ein Leerzeichen treffen, beginnt die Liste
+
+    if (currentElement === " ") {
+      totalist.push(currentlist.join(""))
+      currentlist.length = 0
+    } else {
+      currentlist.push(currentElement)
+    }
+  }
+  //Wir schreiben alles was wir noch bis zum Ende gelesen haben, in die Liste
+  totalist.push(currentlist.join(""))
+
+  return totalist
+}
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
 export function aufgabe19(args) {
   const input = args
   const result = []
@@ -398,9 +422,22 @@ export function eigeneaufgabe24(args) {
 linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
 
 export function bubbleSort(args) {
-  const input = args
-  const result = []
-
-  return result.join("")
+  // Sicherstellen, dass die Eingabe eine Liste ist
+  const list = [...args] // Erzeugt eine Kopie des Eingabearrays
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      // Reihenfolge stimmt nicht, Elemente müssen getauscht werden
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 // Starte von vorne, wenn etwas vertauscht wurde
+    }
+  }
+  const result = list.join("") // Konvertiert die sortierte Liste in einen String
+  console.log(result)
+  return result
 }
+
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
