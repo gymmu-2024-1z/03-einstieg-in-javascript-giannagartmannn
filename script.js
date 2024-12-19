@@ -268,7 +268,19 @@ linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
 export function aufgabe14(args) {
   const input = args
-  const result = []
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i] //wir definieren das current Element mir const
+    if (currentElement === "e") {
+      count++
+      if (count === 3) {
+        //drei gleichheitszeichen bedeuten, dass es genau das sein muss
+        return i // gib die Position des dritten e's zurück
+      }
+    }
+  }
+  return -1 //wir geben -1 zurück, wenn weniger als 3 e's vorkommen
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
