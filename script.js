@@ -289,21 +289,25 @@ export function aufgabe17(args) {
   }
   //Wir schreiben alles was wir bis zum Ende eingelesen haben in die Liste herein
   totalist.push(currentlist.join(""))
-
   return totalist
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
 export function aufgabe18(args) {
-const input = args
-const name
-const result = []
-
-
-
-
-
+  const input = args
+  const nameAndAge = aufgabe17(input)
+  //wwir verwenden Aufgabe 17, um eine Liste zu erstellen
+  const result = []
+  result.push("Sie heissen ")
+  //wir hängen diese Teil an (man kann mehrere Zeichen anfügen)
+  result.push(nameAndAge[0])
+  result.push(" und sind ")
+  result.push(nameAndAge[1])
+  result.push(" Jahre alt")
+  return result.join("")
+  //wir geben das result als Text zurück
 }
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
 
 export function aufgabe19(args) {
   const input = args
