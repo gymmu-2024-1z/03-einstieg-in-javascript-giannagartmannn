@@ -274,22 +274,36 @@ export function aufgabe17(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //wir zählen in die Eingabe (also "einfach nur text..." oder was auch immer wir sonst dort eingeben)
 
     // Sobald wir ein Leerzeichen treffen, beginnt die Liste
 
     if (currentElement === " ") {
       totalist.push(currentlist.join(""))
+      //totalist.push heisst, dass wir an die totaliste anhängen
       currentlist.length = 0
     } else {
       currentlist.push(currentElement)
+      //wenn es kein Leerzeichen hat, hängen wir einfach an
     }
   }
-  //Wir schreiben alles was wir noch bis zum Ende gelesen haben, in die Liste
+  //Wir schreiben alles was wir bis zum Ende eingelesen haben in die Liste herein
   totalist.push(currentlist.join(""))
 
   return totalist
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+export function aufgabe18(args) {
+const input = args
+const name
+const result = []
+
+
+
+
+
+}
 
 export function aufgabe19(args) {
   const input = args
@@ -423,7 +437,8 @@ linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
 
 export function bubbleSort(args) {
   // Sicherstellen, dass die Eingabe eine Liste ist
-  const list = [...args] // Erzeugt eine Kopie des Eingabearrays
+  const text = args
+  const list = text.split("") // Erzeugt eine Kopie des Eingabearrays
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i]
     const nextElement = list[i + 1]
