@@ -461,8 +461,12 @@ export function aufgabe29(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
 
-export function eigeneaufgabe24(args) {
+export function aufgabe24(args) {
   const input = args
+  if (input.length <= 1) {
+    return input
+    //falls die eingabe nur ein zeichen hat, bleibt es unverändert
+  }
   const result = []
 
   const firstElement = input[0]
@@ -481,7 +485,7 @@ export function eigeneaufgabe24(args) {
   return result.join("")
 }
 
-linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function bubbleSort(args) {
   // Sicherstellen, dass die Eingabe eine Liste ist
@@ -503,4 +507,4 @@ export function bubbleSort(args) {
   return result
 }
 
-linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
+linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
