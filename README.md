@@ -158,9 +158,9 @@ Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
 ## Aufgabe 30
 
 (eigene Aufgabe) Alle Wörter werden umgedreht. Wir machen das mithilfe der
-Erkennung von Leerzeichen,
+Erkennung von Leerzeichen
 
 ## Aufgabe 31
 
 (eigene Aufgabe) Die Vokale werden zu ihrem Stellenwert im Alphabet (also
-Zahlen) geändert,
+Zahlen) geändert

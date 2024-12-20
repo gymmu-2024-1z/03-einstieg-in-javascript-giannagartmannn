@@ -521,6 +521,37 @@ export function aufgabe30(args) {
 
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
 
+export function aufgabe31(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    //wir gehen die ganze eingabe urch, um es zu analysieren
+    const currentElement = input[i].toLowerCase() // Wir machen den Buchstaben klein, um die Vokale zu erkennen
+    let replacement = currentElement
+
+    if (currentElement === "a") {
+      replacement = 1 // A -> 1
+    } else if (currentElement === "e") {
+      replacement = 5 // E -> 5
+    } else if (currentElement === "i") {
+      replacement = 9 // I -> 9
+    } else if (currentElement === "o") {
+      replacement = 15 // O -> 15
+    } else if (currentElement === "u") {
+      replacement = 21 // U -> 21
+    }
+    //Wir prüffen, ob das aktuelle Zeichen ein Vokal ist und ersetyen es durch seinen Stellenwert im Alphabet, welche wir angegeben haben (A -> 1)
+    result.push(replacement)
+    // Das Replacement ist der jeweilige Stellenwert der Vokale im Alphabet
+  }
+
+  return result.join("")
+  //die von uns bearbeitete Eingabe (Der Text) wird uns als Resultat angegeben
+}
+
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+
 export function aufgabe24(args) {
   const input = args
   if (input.length <= 1) {
