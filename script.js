@@ -459,17 +459,33 @@ export function aufgabe29(args) {
   }
   return result.join("")
 }
-linkupExerciseHandler("[data-click=eigeneaufgabe]", aufgabe29)
+linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
 
 export function eigeneaufgabe24(args) {
   const input = args
   const result = []
+
+  const firstElement = input[0]
+  //bei 0 beginnen wir beim Zählen
+  const lastElement = input[input.length - 1]
+  //mit -1 zählen wir von hinten an
+
+  result.push(lastElement)
+
+  for (let i = 1; i < input.length - 1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  result.push(firstElement)
+  return result.join("")
 }
+
 linkupExerciseHandler("[data-click=eigeneaufgabe]", eigeneaufgabe24)
 
 export function bubbleSort(args) {
   // Sicherstellen, dass die Eingabe eine Liste ist
-  const itext = args
+  const text = args
   const list = text.split("") // Erzeugt eine Kopie des Eingabearrays
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i]
@@ -483,7 +499,7 @@ export function bubbleSort(args) {
     }
   }
   const result = list.join("") // Konvertiert die sortierte Liste in einen String
-  console.log(result)
+
   return result
 }
 
