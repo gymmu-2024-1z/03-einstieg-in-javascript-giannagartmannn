@@ -139,7 +139,6 @@ linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
   const input = args
-  const result = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -153,11 +152,15 @@ export function aufgabe06(args) {
     } else if (ascii >= 97 && ascii <= 122) {
       // okay, mache weiter
       // wir suchen den ASCII-Wert von Kleinbuchstaben, damit wir nichts machen, falls diese vorkommen
+    } else if (ascii === 32) {
+      // okay, mache weiter
     } else {
       return true
+      //wenn Sonderzeichen gefunden wurden
     }
   }
   return false
+  //keine Sonderzeichen wurden gefunden
 }
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
@@ -348,6 +351,9 @@ export function aufgabe19(args) {
       //verdopple sie
       result.push(currentElement + currentElement)
       //hier wird eigentlich einfach das Element plus nochmal das Element zusammengefügt (bspw. a + a = aa)
+    } else {
+      result.push(currentElement)
+      //wenn die Zeichen keine kleinbuchstaben sind, bleiben sie unverändert
     }
   }
   return result.join("")
@@ -376,13 +382,13 @@ linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
 
 export function aufgabe20(args) {
   const input = args
-  const result = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
     if (currentElement === ".") {
       // falls also das current element ein punkt ist
-      if (input[i + 1] === ".") {
+      if (input[i + 1] < input.length && input[i + 1] === " ") {
         return true
         //soll uns "true" angezeigt werden
       } else {
@@ -439,6 +445,27 @@ export function aufgabe22(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  //das ist die Eingabe, die wir bearbeiten wollen (also "einfach nur text..." (ausser, wir ändern die Eingabe zu etwas beliebigem))
+  const result = []
+  //dort werden die Ergebnisse gespeichert
+
+  if (input.length > 0) {
+    const firstElement = input[0] //das erste Zeichen wird gespeichert
+    result.push(firstElement + firstElement) //das erste Zeichen wird also verdoppelt
+
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      result.push(currentElement)
+    }
+    result.push(firstElement) // füge das erste Zeichen auch am Ende hinzu
+  }
+  return result.join("")
+  //füge das Zeichen am ende hinzu
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
 export function aufgabe29(args) {
   const input = args
@@ -508,3 +535,20 @@ export function bubbleSort(args) {
 }
 
 linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
+
+export function SelectionSort(args) {
+const input = args
+const lookup = new Array(128).fill(0)
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement =
+
+
+
+
+
+
+}
+
+
+linkupExerciseHandler("[data-click=SelectionSort]", SelectionSort)
