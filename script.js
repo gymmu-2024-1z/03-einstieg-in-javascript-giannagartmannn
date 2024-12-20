@@ -487,6 +487,39 @@ export function aufgabe29(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+export function aufgabe30(args) {
+  const input = args
+  const result = []
+
+  let word = "" // wir sammeln jedes Wort zwischen Leerzeichen
+
+  for (let i = 0; i < input.length; i++) {
+    // Wir durchlaufen den Text, Zeichen für Zeichen.
+    const currentElement = input[i]
+
+    if (currentElement === " ") {
+      //  // Wenn es ein Leerzeichen hat, beginnen wir nachher ein neues Wort
+      if (word.length > 0) {
+        result.push(word) // Das Wort wird also an die Liste (unser Resultat nachher, sbald wir den Button klicken) angehängt
+        word = ""
+      }
+    } else {
+      word += currentElement // Wenn es kein Leerzeichen hat, gehört das aktuelle Zeichen zum Wort
+    }
+  }
+
+  if (word.length > 0) {
+    result.push(word)
+    // Das letzte Word muss hinzugefügt werden, da es dahinter kein Leerzeichen hat
+  }
+  const reversedWords = result.map((word) => {
+    return word.split("").reverse().join("") // Dreht jedes Wort um
+  })
+
+  return reversedWords.join(" ")
+}
+
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
 
 export function aufgabe24(args) {
   const input = args
@@ -536,19 +569,8 @@ export function bubbleSort(args) {
 
 linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
 
-export function SelectionSort(args) {
-const input = args
-const lookup = new Array(128).fill(0)
-
-for (let i = 0; i < input.length; i++) {
-  const currentElement =
-
-
-
-
-
-
-}
-
-
+export function SelectionSort(args) {}
 linkupExerciseHandler("[data-click=SelectionSort]", SelectionSort)
+
+export function radixSort(args) {}
+linkupExerciseHandler('[data-click="radixSort"]', radixSort)
