@@ -49,7 +49,7 @@
         <button type="button" data-click="aufgabe31">Aufgabe 31</button>
 
         <button type="button" data-click="BubbleSort">BubbleSort</button>
-        <button type="button" data-click="RadixSort">RadixSort</button>
+        <button type="button" data-click="CountingSort">CountingSort</button>
         <button type="button" data-click="SelectionSort">SelectionSort</button>
       </div>
 
@@ -63,7 +63,7 @@
         (also unsere Eingabe) nochmal durchgegangen, damit alle Elemente
         miteinander verglichen werden und am Schluss die richtige Reihenfolge
         haben.
-        <h4>Selectionsort:</h4>
+        <h3>Selectionsort:</h3>
         Dieses Verfahren verwendet ebenfalls einen Vergleich. Selectionsort
         funktioniert so, dass man die Eingabe (in unserem Fall "einfach nur
         text...", ausser wir ändern dies) durchgeht und das Element (bspw. einen
@@ -71,20 +71,25 @@
         einem Fall mit Buchstaben wird automatisch der ASCII-Wert verglichen,
         bei Zahlen, deren Wert. Dann wird der Wert dieses Elementes mit dem Wert
         des nächsten Elements verglichen. Somit ist am Schluss das Element mit
-        dem kleinsten ASCII-Wert vorne.
-        <h5>1.</h5>
-        Wir nehmen an, dass das erste Element das kleinste ist.
-        <h5>2.</h5>
-        das "kleinste" wird mit allen anderen Elementen verglichen.
-        <h6>3.</h6>
-        Wenn ein kleineres als das "kleinste" gefunden wird, aktualisiere das
-        "kleinste", indem dessen Index gespeichert wird.
-        <h7>4.</h7>
-        Am Ende eines Durchgangs (bei dem alle Elemente mit dem "kleinsten"
-        verglichen wurde) wird das kleinste Element an die erste Position der
-        Eingabe/des Arrays gesetzt.
-        <h8>5.</h8> Dieses Vergleichen geht so lange weiter, indem bei jedem
-        Durchgang der Bereich der noch nicht sortierten Elementen kleiner wird.
+        dem kleinsten ASCII-Wert vorne. Vorgehen:Wir nehmen an, dass das erste
+        Element das kleinste ist. Dieses "kleinste" wird mit allen anderen
+        Elementen verglichen. Wenn ein kleineres Element als das "kleinste
+        Element" gefunden wird, wird das tatsächlich kleinere Element an die
+        vordere Stelle/erste Position in der Array gesetzt. Bei jedem Durchgang
+        wird der Bereich der noch nicht sortierten Elementen kleiner. Bis eben
+        alle sortiert sind.
+        <h3>CountingSort:</h3>
+        Bei Counting Sort wird die Häufigkeit der Elemente genutzt, um sie zu
+        sortieren. Ein neues Array (das Lookup-Array) wird erstellt, um die
+        Häufigkeit der möglichen Zeichen zu speichern. Zuerst wird gezählt, wie
+        oft jedes Zeichen, zum Beispiel Buchstaben oder Zahlen, vorkommt. Diese
+        Zählungen werden im Array gespeichert. Die Sortierung basiert auf diesen
+        Zählungen. Die Zeichen erscheinen so oft im Endergebnis, wie sie gezählt
+        wurden. Wenn es also zum Beispiel zwei 'e's in der Eingabe gab, werden
+        auch zwei 'e's in der sortierten Ausgabe erscheinen. Am Ende werden die
+        Zeichen wieder anhand ihrer ASCII-Werte oder Ziffern in die richtige
+        Reihenfolge gebracht und als sortierte Liste angezeigt.
+
         <defs> </defs>
       </section>
     </div>
