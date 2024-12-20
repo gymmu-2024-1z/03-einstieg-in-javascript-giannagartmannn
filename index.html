@@ -23,11 +23,74 @@
       <div class="button-container">
         <!-- TODO: Hier neue Buttons erstellen. -->
         <button type="button" data-click="aufgabe01">Aufgabe 1</button>
+        <button type="button" data-click="aufgabe02">Aufgabe 2</button>
+        <button type="button" data-click="aufgabe03">Aufgabe 3</button>
+        <button type="button" data-click="aufgabe04">Aufgabe 4</button>
+        <button type="button" data-click="aufgabe05">Aufgabe 5</button>
+        <button type="button" data-click="aufgabe06">Aufgabe 6</button>
+        <button type="button" data-click="aufgabe07">Aufgabe 7</button>
+        <button type="button" data-click="aufgabe08">Aufgabe 8</button>
+        <button type="button" data-click="aufgabe09">Aufgabe 9</button>
+        <button type="button" data-click="aufgabe10">Aufgabe 10</button>
+
+        <button type="button" data-click="aufgabe12">Aufgabe 12</button>
+        <button type="button" data-click="aufgabe13">Aufgabe 13</button>
+        <button type="button" data-click="aufgabe14">Aufgabe 14</button>
+        <button type="button" data-click="aufgabe17">Aufgabe 17</button>
+        <button type="button" data-click="aufgabe18">Aufgabe 18</button>
+        <button type="button" data-click="aufgabe19">Aufgabe 19</button>
+        <button type="button" data-click="aufgabe27">Aufgabe 27</button>
+        <button type="button" data-click="aufgabe20">Aufgabe 20</button>
+        <button type="button" data-click="aufgabe21">Aufgabe 21</button>
+        <button type="button" data-click="aufgabe22">Aufgabe 22</button>
+        <button type="button" data-click="aufgabe24">Aufgabe 24</button>
+        <button type="button" data-click="aufgabe29">Aufgabe 29</button>
+        <button type="button" data-click="aufgabe30">Aufgabe 30</button>
+        <button type="button" data-click="aufgabe31">Aufgabe 31</button>
+
+        <button type="button" data-click="BubbleSort">BubbleSort</button>
+        <button type="button" data-click="CountingSort">CountingSort</button>
+        <button type="button" data-click="SelectionSort">SelectionSort</button>
       </div>
 
       <section>
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
+        <h3>BubbleSort:</h3>
+        Der ASCII-Wert der Elemente wird verglichen. Immer das eine Element mit
+        dem Anderen. Dies Können bspw. Zahlen oder WWörter sein. Das Element mit
+        dem grösseren ASCII-Wert wird nach hinten gesetzt. Dann wird die Liste
+        (also unsere Eingabe) nochmal durchgegangen, damit alle Elemente
+        miteinander verglichen werden und am Schluss die richtige Reihenfolge
+        haben.
+        <h3>Selectionsort:</h3>
+        Dieses Verfahren verwendet ebenfalls einen Vergleich. Selectionsort
+        funktioniert so, dass man die Eingabe (in unserem Fall "einfach nur
+        text...", ausser wir ändern dies) durchgeht und das Element (bspw. einen
+        Buchstaben oder eine Zahl) mit dem kleinsten Wert nach Vorne setzt. In
+        einem Fall mit Buchstaben wird automatisch der ASCII-Wert verglichen,
+        bei Zahlen, deren Wert. Dann wird der Wert dieses Elementes mit dem Wert
+        des nächsten Elements verglichen. Somit ist am Schluss das Element mit
+        dem kleinsten ASCII-Wert vorne. Vorgehen:Wir nehmen an, dass das erste
+        Element das kleinste ist. Dieses "kleinste" wird mit allen anderen
+        Elementen verglichen. Wenn ein kleineres Element als das "kleinste
+        Element" gefunden wird, wird das tatsächlich kleinere Element an die
+        vordere Stelle/erste Position in der Array gesetzt. Bei jedem Durchgang
+        wird der Bereich der noch nicht sortierten Elementen kleiner. Bis eben
+        alle sortiert sind.
+        <h3>CountingSort:</h3>
+        Bei Counting Sort wird die Häufigkeit der Elemente genutzt, um sie zu
+        sortieren. Ein neues Array (das Lookup-Array) wird erstellt, um die
+        Häufigkeit der möglichen Zeichen zu speichern. Zuerst wird gezählt, wie
+        oft jedes Zeichen, zum Beispiel Buchstaben oder Zahlen, vorkommt. Diese
+        Zählungen werden im Array gespeichert. Die Sortierung basiert auf diesen
+        Zählungen. Die Zeichen erscheinen so oft im Endergebnis, wie sie gezählt
+        wurden. Wenn es also zum Beispiel zwei 'e's in der Eingabe gab, werden
+        auch zwei 'e's in der sortierten Ausgabe erscheinen. Am Ende werden die
+        Zeichen wieder anhand ihrer ASCII-Werte oder Ziffern in die richtige
+        Reihenfolge gebracht und als sortierte Liste angezeigt.
+
+        <defs> </defs>
       </section>
     </div>
 

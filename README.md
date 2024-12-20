@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/SYYUWTQg)
+
 # Einstieg ins Programmieren mit Javascript
 
 Dieses Projekt bietet viele Aufgaben mit automatischen Tests, bei denen Sie das
@@ -148,3 +150,17 @@ Testen sie, ob eine Eingabe eine Zahl ist.
 
 Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
 Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
+
+## Aufgabe 29
+
+(eigene Aufgabe) Alle e`s verdoppeln
+
+## Aufgabe 30
+
+(eigene Aufgabe) Alle Wörter werden umgedreht. Wir machen das mithilfe der
+Erkennung von Leerzeichen
+
+## Aufgabe 31
+
+(eigene Aufgabe) Die Vokale werden zu ihrem Stellenwert im Alphabet (also
+Zahlen) geändert
