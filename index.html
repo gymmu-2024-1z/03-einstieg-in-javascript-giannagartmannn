@@ -56,29 +56,35 @@
       <section>
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
-        BubbleSort: Der ASCII-Wert der Eingaben wird verglichen. Immer das eine
-        Element mit dem Anderen. Das mit dem grösseren ASCII-Wert wird nach
-        hinten gesetzt. Dann wird die Liste (also unsere Eingabe "einfach nur
-        text...") nochmal durchgegangen, damit nicht bspw. das f von "einfach
-        nur text..." an die erste Stelle geht und dann nicht mehr mit den
-        anderen folgenden Zeichen verglichen würde. Das würde zu Fehlern führen.
-        Deshalb gehen wir die Liste so oft durch, bis es die richtige
-        Reiheinfolge hat. Selectionsort: Dieses Verfahren verwendet ebenfalls
-        einen Vergleich. Selectionsort funktioniert so, dass man die Eingabe (in
-        unserem Fall "einfach nur text...", ausser wir ändern dies) durchgeht
-        und das Element (bspw. einen Buchstaben oder eine Zahl) mit dem
-        kleinsten Wert nach Vorne setzt. In einem Fall mit Buchstaben wird
-        automatisch der ASCII-Wert verglichen, bei Zahlen, deren Wert. Dann wird
-        der Wert dieses Elementes mit dem Wert des nächsten Elements verglichen.
-        Somit ist am Schluss das Element mit dem kleinsten ASCII-Wert vorne. 1.
-        wir nehmen an, dass das erste Element das kleinste ist 2. das "kleinste"
-        wird mit allen anderen Elementen verglichen 3. wenn ein kleineres als
-        das "kleinste" gefunden wird, aktualisiere das "kleinste", indem dessen
-        Index gespeichert wird. 4. Am Ende eines Durchgangs (bei dem alle
-        Elemente mit dem "kleinsten" verglichen wurde) wird das kleinste Element
-        an die erste Position der Eingabe/des Arrays gesetzt. 5. Dieses
-        Vergleichen geht so lange weiter, indem bei jedem Durchgang der Bereich
-        der noch nicht sortierten Elementen kleiner wird.
+        <h3>BubbleSort:</h3>
+        Der ASCII-Wert der Elemente wird verglichen. Immer das eine Element mit
+        dem Anderen. Dies Können bspw. Zahlen oder WWörter sein. Das Element mit
+        dem grösseren ASCII-Wert wird nach hinten gesetzt. Dann wird die Liste
+        (also unsere Eingabe) nochmal durchgegangen, damit alle Elemente
+        miteinander verglichen werden und am Schluss die richtige Reihenfolge
+        haben.
+        <h4>Selectionsort:</h4>
+        Dieses Verfahren verwendet ebenfalls einen Vergleich. Selectionsort
+        funktioniert so, dass man die Eingabe (in unserem Fall "einfach nur
+        text...", ausser wir ändern dies) durchgeht und das Element (bspw. einen
+        Buchstaben oder eine Zahl) mit dem kleinsten Wert nach Vorne setzt. In
+        einem Fall mit Buchstaben wird automatisch der ASCII-Wert verglichen,
+        bei Zahlen, deren Wert. Dann wird der Wert dieses Elementes mit dem Wert
+        des nächsten Elements verglichen. Somit ist am Schluss das Element mit
+        dem kleinsten ASCII-Wert vorne.
+        <h5>1.</h5>
+        Wir nehmen an, dass das erste Element das kleinste ist.
+        <h5>2.</h5>
+        das "kleinste" wird mit allen anderen Elementen verglichen.
+        <h6>3.</h6>
+        Wenn ein kleineres als das "kleinste" gefunden wird, aktualisiere das
+        "kleinste", indem dessen Index gespeichert wird.
+        <h7>4.</h7>
+        Am Ende eines Durchgangs (bei dem alle Elemente mit dem "kleinsten"
+        verglichen wurde) wird das kleinste Element an die erste Position der
+        Eingabe/des Arrays gesetzt.
+        <h8>5.</h8> Dieses Vergleichen geht so lange weiter, indem bei jedem
+        Durchgang der Bereich der noch nicht sortierten Elementen kleiner wird.
         <defs> </defs>
       </section>
     </div>
