@@ -341,6 +341,7 @@ export function aufgabe18(args) {
 linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
 
 export function aufgabe19(args) {
+  //wir kopieren die Eingabe
   const input = args
   const result = []
   //wenn du ein Zeichen findest
@@ -607,27 +608,32 @@ export function bubbleSort(args) {
 linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
 
 export function selectionSort(args) {
-  // Clone the input array to preserve the original array
+  // Wir kopieren die Eingabe/Array
   const input = [...args]
 
+  //Jedes Element in der Eingabe wird durchgegangen, ausser das Letzte (deshab das -1), da dieses am Schluss automatisch sortiert wird
   for (let i = 0; i < input.length - 1; i++) {
+    //wir nehmen an, dass das aktuelle Element das kleinste ist
     let minIndex = i
+
+    //hier wird das aktuelle (wie wir annhemen, kleinste) Element mit allen folgenden Elementen verglichen
     for (let j = i + 1; j < input.length; j++) {
+      // Wenn ein kleineres Element gefunden wird, aktualisiere minIndex. das bedeutet, dass wir dieses nun an die vvorderste Stelle setzen.
       if (input[j] < input[minIndex]) {
-        minIndex = j
+        minIndex = j // minIndex zeigt nun auf das kleinere Element
       }
     }
 
-    // Swap input[i] and input[minIndex]
-    const temp = input[i]
-    input[i] = input[minIndex]
-    input[minIndex] = temp
+    //Das Element an der Stelle i wird mit dem kleineren Element ( an der Stelle minIndex) getauscht. das heisst, dass minIndex jetzt ganz vorne ist.
+    const temp = input[i] // Speichere das aktuelle Element in einer temporären Variablen
+    input[i] = input[minIndex] // Setze das kleinere Element an die Position i
+    input[minIndex] = temp // Setze das Element an der Position minIndex an die ursprüngliche Position von i (nach vorne)
   }
 
+  // Gib das sortierte Array (die Eingabe) zurück
   return input
 }
-
-linkupExerciseHandler("[data-click=SelectionSort]", selectionSort)
+linkupExerciseHandler("[data-click=selectionSort]", selectionSort)
 
 export function radixSort(args) {}
 linkupExerciseHandler('[data-click="radixSort"]', radixSort)
