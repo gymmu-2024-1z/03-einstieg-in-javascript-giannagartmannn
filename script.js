@@ -471,14 +471,18 @@ export function aufgabe29(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
+    //wir gehen die Eingabe durch
     const currentElement = input[i]
+    // und schauen jedes Zeichen individuell an
     if (currentElement === "e") {
-      //verdoplle sie
+      //falls es ein e ist (wir verwenden 3 gleichheitszeichen wenn das currentElement exakt das folgende, in diesem fall "e" ist)
+      //wir verdoppeln die e's dann
       result.push(currentElement + currentElement)
+      // e ist das currentElement. wir machen also e + e
     } else if (currentElement === "E") {
-      //verdopple sie
+      //bei grossen E's dasselbe
       result.push(currentElement + currentElement)
-      //Element + Element
+      //Element + Element (In diesem Fall E + E)
     } else {
       result.push(currentElement)
       //alle anderen Zeichen bleiben unverändert
@@ -570,9 +574,11 @@ export function aufgabe24(args) {
   for (let i = 1; i < input.length - 1; i++) {
     const currentElement = input[i]
     result.push(currentElement)
+    //alle Zeichen zwischen der ersten und letzten bleiben unverändert
   }
 
   result.push(firstElement)
+  //das erste zeichen wird nochmals angefügt
   return result.join("")
 }
 
@@ -600,8 +606,28 @@ export function bubbleSort(args) {
 
 linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
 
-export function SelectionSort(args) {}
-linkupExerciseHandler("[data-click=SelectionSort]", SelectionSort)
+export function selectionSort(args) {
+  // Clone the input array to preserve the original array
+  const input = [...args]
+
+  for (let i = 0; i < input.length - 1; i++) {
+    let minIndex = i
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[j] < input[minIndex]) {
+        minIndex = j
+      }
+    }
+
+    // Swap input[i] and input[minIndex]
+    const temp = input[i]
+    input[i] = input[minIndex]
+    input[minIndex] = temp
+  }
+
+  return input
+}
+
+linkupExerciseHandler("[data-click=SelectionSort]", selectionSort)
 
 export function radixSort(args) {}
 linkupExerciseHandler('[data-click="radixSort"]', radixSort)
